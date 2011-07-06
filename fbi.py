@@ -4,6 +4,7 @@
 # Simple Fogbugz Interpreter
 ###
 
+import atexit
 import cmd
 import ConfigParser
 import getpass
@@ -22,9 +23,13 @@ class FogbugzInterpreter(cmd.Cmd):
     edit/update
     add/new
     [#xxx]
+
+    reload:
+    http://www.japh.de/blog/python-reloading-a-class-definition-at-runtime/
+    http://www.indelible.org/ink/python-reloading/
   '''
 
-  def __init__(self, configfile=os.path.expanduser('~/.fbi')):
+  def __init__(self, configfile=os.path.expanduser('~/.fbi'), historyfile=os.path.expanduser('~/.fbi_history')):
     # Load config
     self.CONFIG_FILE = configfile
     self.config = ConfigParser.SafeConfigParser()
@@ -58,15 +63,41 @@ class FogbugzInterpreter(cmd.Cmd):
       self.config.set('main', 'token', self.token)
       self.config.write(open(self.CONFIG_FILE, 'wb'))
 
+    # History
+    self.init_history(historyfile)
+
     cmd.Cmd.__init__(self)
     self.prompt = 'fbi> '
-    pass
 
-  def do_greet(self, line):
-    print 'hello'
 
+  ### History
+  def init_history(self, histfile):
+    readline.parse_and_bind("tab: complete")
+    if hasattr(readline, "read_history_file"):
+      try:
+        readline.read_history_file(histfile)
+      except IOError:
+        pass
+      atexit.register(self.save_history, histfile)
+
+  def save_history(self, histfile):
+    readline.write_history_file(histfile)
+
+
+  ### Exiting
+  def do_EOF(self, line):
+    print 'Exiting'
+    sys.exit()
+
+  def do_exit(self, line):
+    self.do_EOF(line)
+
+  def do_quit(self, line):
+    self.do_EOF(line)
+
+
+  ### Commands
   '''
-
   API Details:
   http://fogbugz.stackexchange.com/fogbugz-xml-api
 
@@ -87,10 +118,21 @@ class FogbugzInterpreter(cmd.Cmd):
   Update estimate
   Update due date
   
-  Start time
-  End time
-
   '''
+  def do_close(self, line):
+    if not line:
+      print 'close [bug #] [optional: comment]'
+      return
+
+    args = line.split(' ', 1)
+
+    if len(args) == 2:
+      self.fb.resolve(ixBug=args[0], ixStatus=args[1])
+    else:
+      self.fb.resolve(ixBug=args[0])
+
+    self.fb.close(ixBug=args[0])
+
 
   def do_list(self, line):
     # Default Filter
@@ -116,13 +158,23 @@ class FogbugzInterpreter(cmd.Cmd):
     # search items
     pass
   
-  def do_EOF(self, line):
-    print 'Exiting'
-    sys.exit()
 
+  def do_start(self, line):
+    r = self.fb.startWork(ixBug=line)
+    # TODO: get info on item?
+    print "Starting work on %s" % line
+
+  def do_stop(self, line):
+    r = self.fb.stopWork()
+    print "Stopping all work"
 
 if __name__ == '__main__':
-  FogbugzInterpreter().cmdloop()
+  try:
+    fbi = FogbugzInterpreter()
+    fbi.cmdloop()
+  except KeyboardInterrupt:
+    fbi.do_EOF('')
+    
 
 
 
