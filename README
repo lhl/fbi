@@ -1,0 +1,31 @@
+Adding and editing FogBugz UI is mega-clunky and slow.
+After an afternoon poking into the JS (give up, its completely intractable), 
+writing a CLI shell seemed to be the simplest workaround.
+
+This is similar to the fbshell included w/ FogBugzPy, but focused on the
+functionality that I need.
+
+
+Commands:
++ is implemented
+. is planned 
+
+Listing/Searching
+---
++ list [#]
+. search [parse]
+
+Adding
+---
+. new [parse]
+
+Manipulating
+---
++ close [#] [note]
+. [#] [parse]
+. edit [#] [parse]
+
+Worklog
+---
++ start [#]
++ stop
