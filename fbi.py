@@ -119,6 +119,20 @@ class FogbugzInterpreter(cmd.Cmd):
   Update due date
   
   '''
+
+  def default(self, line):
+    args = line.split(' ')
+
+    try:
+      case = int(args[0])
+      self.edit(args)
+      return
+    except:
+      pass
+
+
+    self.do_help('')
+
   def do_close(self, line):
     if not line:
       print 'close [bug #] [optional: comment]'
@@ -167,6 +181,21 @@ class FogbugzInterpreter(cmd.Cmd):
   def do_stop(self, line):
     r = self.fb.stopWork()
     print "Stopping all work"
+
+
+  def edit(self, args):
+    if len(args) > 1:
+      for arg in args:
+        cmd = arg.split(':')
+        if len(cmd) > 1:
+          print cmd
+
+
+    print args
+
+
+
+
 
 if __name__ == '__main__':
   try:
