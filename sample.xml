@@ -1,0 +1,145 @@
+<response>
+    <cases count="7">
+        <case ixbug="551" operations="edit,assign,resolve,email,remind">
+            <ixbug>551</ixbug>
+            <ixbugparent>544</ixbugparent>
+            <fopen>true</fopen>
+            <stitle><![CDATA[Last Photo]]></stitle>
+            <ixproject>3</ixproject>
+            <sproject><![CDATA[Lensley]]></sproject>
+            <ixarea>14</ixarea>
+            <sarea><![CDATA[Photo Booth]]></sarea>
+            <ixstatus>1</ixstatus>
+            <sstatus><![CDATA[Active]]></sstatus>
+            <ixpriority>3</ixpriority>
+            <spriority><![CDATA[Must Fix]]></spriority>
+            <hrscurrest>0</hrscurrest>
+            <hrselapsed>0</hrselapsed>
+            <ixcategory>1</ixcategory>
+            <dtdue></dtdue>
+            <ixbugchildren></ixbugchildren>
+            <scategory><![CDATA[Bug]]></scategory>
+        </case>
+        <case ixbug="550" operations="edit,assign,resolve,email,remind">
+            <ixbug>550</ixbug>
+            <ixbugparent>548</ixbugparent>
+            <fopen>true</fopen>
+            <stitle><![CDATA[Last synced, Sync]]></stitle>
+            <ixproject>3</ixproject>
+            <sproject><![CDATA[Lensley]]></sproject>
+            <ixarea>14</ixarea>
+            <sarea><![CDATA[Photo Booth]]></sarea>
+            <ixstatus>1</ixstatus>
+            <sstatus><![CDATA[Active]]></sstatus>
+            <ixpriority>3</ixpriority>
+            <spriority><![CDATA[Must Fix]]></spriority>
+            <hrscurrest>0</hrscurrest>
+            <hrselapsed>0</hrselapsed>
+            <ixcategory>1</ixcategory>
+            <dtdue></dtdue>
+            <ixbugchildren></ixbugchildren>
+            <scategory><![CDATA[Bug]]></scategory>
+        </case>
+        <case ixbug="548" operations="edit,assign,resolve,email,remind">
+            <ixbug>548</ixbug>
+            <ixbugparent>544</ixbugparent>
+            <fopen>true</fopen>
+            <stitle><![CDATA[Version]]></stitle>
+            <ixproject>3</ixproject>
+            <sproject><![CDATA[Lensley]]></sproject>
+            <ixarea>14</ixarea>
+            <sarea><![CDATA[Photo Booth]]></sarea>
+            <ixstatus>1</ixstatus>
+            <sstatus><![CDATA[Active]]></sstatus>
+            <ixpriority>3</ixpriority>
+            <spriority><![CDATA[Must Fix]]></spriority>
+            <hrscurrest>0</hrscurrest>
+            <hrselapsed>0</hrselapsed>
+            <ixcategory>1</ixcategory>
+            <dtdue></dtdue>
+            <ixbugchildren>550</ixbugchildren>
+            <scategory><![CDATA[Bug]]></scategory>
+        </case>
+        <case ixbug="549" operations="edit,assign,resolve,email,remind">
+            <ixbug>549</ixbug>
+            <ixbugparent>544</ixbugparent>
+            <fopen>true</fopen>
+            <stitle><![CDATA[Setup (Standard, RFID, etc)]]></stitle>
+            <ixproject>3</ixproject>
+            <sproject><![CDATA[Lensley]]></sproject>
+            <ixarea>14</ixarea>
+            <sarea><![CDATA[Photo Booth]]></sarea>
+            <ixstatus>1</ixstatus>
+            <sstatus><![CDATA[Active]]></sstatus>
+            <ixpriority>3</ixpriority>
+            <spriority><![CDATA[Must Fix]]></spriority>
+            <hrscurrest>0</hrscurrest>
+            <hrselapsed>0</hrselapsed>
+            <ixcategory>1</ixcategory>
+            <dtdue></dtdue>
+            <ixbugchildren></ixbugchildren>
+            <scategory><![CDATA[Bug]]></scategory>
+        </case>
+        <case ixbug="547" operations="edit,assign,resolve,email,remind">
+            <ixbug>547</ixbug>
+            <ixbugparent>544</ixbugparent>
+            <fopen>true</fopen>
+            <stitle><![CDATA[Photo #]]></stitle>
+            <ixproject>3</ixproject>
+            <sproject><![CDATA[Lensley]]></sproject>
+            <ixarea>14</ixarea>
+            <sarea><![CDATA[Photo Booth]]></sarea>
+            <ixstatus>1</ixstatus>
+            <sstatus><![CDATA[Active]]></sstatus>
+            <ixpriority>3</ixpriority>
+            <spriority><![CDATA[Must Fix]]></spriority>
+            <hrscurrest>0</hrscurrest>
+            <hrselapsed>0</hrselapsed>
+            <ixcategory>1</ixcategory>
+            <dtdue></dtdue>
+            <ixbugchildren></ixbugchildren>
+            <scategory><![CDATA[Bug]]></scategory>
+        </case>
+        <case ixbug="546" operations="edit,assign,resolve,email,remind">
+            <ixbug>546</ixbug>
+            <ixbugparent>544</ixbugparent>
+            <fopen>true</fopen>
+            <stitle><![CDATA[Network]]></stitle>
+            <ixproject>3</ixproject>
+            <sproject><![CDATA[Lensley]]></sproject>
+            <ixarea>14</ixarea>
+            <sarea><![CDATA[Photo Booth]]></sarea>
+            <ixstatus>1</ixstatus>
+            <sstatus><![CDATA[Active]]></sstatus>
+            <ixpriority>3</ixpriority>
+            <spriority><![CDATA[Must Fix]]></spriority>
+            <hrscurrest>0</hrscurrest>
+            <hrselapsed>0</hrselapsed>
+            <ixcategory>1</ixcategory>
+            <dtdue></dtdue>
+            <ixbugchildren></ixbugchildren>
+            <scategory><![CDATA[Bug]]></scategory>
+        </case>
+        <case ixbug="545" operations="edit,assign,resolve,email,remind">
+            <ixbug>545</ixbug>
+            <ixbugparent>544</ixbugparent>
+            <fopen>true</fopen>
+            <stitle><![CDATA[Printer, prints]]></stitle>
+            <ixproject>3</ixproject>
+            <sproject><![CDATA[Lensley]]></sproject>
+            <ixarea>14</ixarea>
+            <sarea><![CDATA[Photo Booth]]></sarea>
+            <ixstatus>1</ixstatus>
+            <sstatus><![CDATA[Active]]></sstatus>
+            <ixpriority>3</ixpriority>
+            <spriority><![CDATA[Must Fix]]></spriority>
+            <hrscurrest>0</hrscurrest>
+            <hrselapsed>0</hrselapsed>
+            <ixcategory>1</ixcategory>
+            <dtdue></dtdue>
+            <ixbugchildren></ixbugchildren>
+            <scategory><![CDATA[Bug]]></scategory>
+        </case>
+    </cases>
+</response>
+
